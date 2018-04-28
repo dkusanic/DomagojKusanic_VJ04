@@ -27,7 +27,7 @@ namespace LOTO_aplikacija
             vrijednosti.Add(txtUplaceniBroj5.Text);
             vrijednosti.Add(txtUplaceniBroj6.Text);
             vrijednosti.Add(txtUplaceniBroj7.Text);
-            bool ispravnaKombinacija = loto.UnesiUplaceneBrojeve(vrijednosti);
+            bool ispravnaKombinacija = Loto.UnesiUplaceneBrojeve(vrijednosti);
             if (ispravnaKombinacija == true)
             {
                 btnOdigraj.Enabled = true;
@@ -41,15 +41,15 @@ namespace LOTO_aplikacija
 
         private void btnOdigraj_Click(object sender, EventArgs e)
         {
-            loto.GenerirajDobitnuKombinaciju();
-            txtDobitniBroj1.Text = loto.DobitniBrojevi[0].ToString();
-            txtDobitniBroj2.Text = loto.DobitniBrojevi[1].ToString();
-            txtDobitniBroj3.Text = loto.DobitniBrojevi[2].ToString();
-            txtDobitniBroj4.Text = loto.DobitniBrojevi[3].ToString();
-            txtDobitniBroj5.Text = loto.DobitniBrojevi[4].ToString();
-            txtDobitniBroj6.Text = loto.DobitniBrojevi[5].ToString();
-            txtDobitniBroj7.Text = loto.DobitniBrojevi[6].ToString();
-            int brojPogodaka = loto.IzracunajBrojPogodaka();
+            Loto.GenerirajDobitnuKombinaciju();
+            txtDobitniBroj1.Text = Loto.DobitniBrojevi[0].ToString();
+            txtDobitniBroj2.Text = Loto.DobitniBrojevi[1].ToString();
+            txtDobitniBroj3.Text = Loto.DobitniBrojevi[2].ToString();
+            txtDobitniBroj4.Text = Loto.DobitniBrojevi[3].ToString();
+            txtDobitniBroj5.Text = Loto.DobitniBrojevi[4].ToString();
+            txtDobitniBroj6.Text = Loto.DobitniBrojevi[5].ToString();
+            txtDobitniBroj7.Text = Loto.DobitniBrojevi[6].ToString();
+            int brojPogodaka = Loto.IzracunajBrojPogodaka();
             lblBrojPogodaka.Text = brojPogodaka.ToString();
         }
     }
